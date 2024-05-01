@@ -1,0 +1,7 @@
+.container {
+    display: flex;
+}
+
+.img-fluid {
+    margin-top: 200px;
+}
