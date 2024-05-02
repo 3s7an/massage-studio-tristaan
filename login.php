@@ -34,14 +34,17 @@ if (array_key_exists("prihlasit", $_POST)) {
          $_SESSION["prihlasenyUzivatel"] = $loName;
        }
     
+    //uzivatel zadal neplatne udaje 
     else 
     {
     $chyba =  "Prihlasenie bolo neuspesne";
     }
     }
 
+    //prihlasenie sa pomocou admina
     if($loName == "admin" && $loPassword == "1111"){
       header("Location: ./admin.php");
+      
     }
   }
 ?>
