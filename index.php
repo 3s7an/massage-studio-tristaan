@@ -76,7 +76,7 @@ if (array_key_exists("odhlasit", $_POST)) {
             }
             else {
               //ak sa uzivatel este neprihlasil, namiesto jeho mena sa zobrazi presmerovanie na prihlasenie
-                echo '<a href="#">Login</a>';
+                echo '<a href="./login.php">Login</a>';
             }
             ?>
             </h5>
