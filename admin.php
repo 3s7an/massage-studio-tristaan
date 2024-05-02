@@ -9,7 +9,15 @@ require "oop-stranky.php";
 	<title>Administrácia</title>
 </head>
 <body>
-	
+	<?php 
+	//vypis vsetkych stranok, ktoré sa daju editovat
+	foreach($zoznam as $stranka => $instancia){
+		
+		// pridanie si do url idčko stranky vdaka comu viem na ktoru stranku sa kliklo
+		echo "<li><a href='?stranka=$instancia->id'>$instancia->id</a></li>";	
+	}
+
+	?>
 	
 </body>
 </html>
