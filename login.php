@@ -33,11 +33,15 @@ if (array_key_exists("prihlasit", $_POST)) {
         header("Location: ./index.php");
          $_SESSION["prihlasenyUzivatel"] = $loName;
        }
-
+    
     else 
     {
     $chyba =  "Prihlasenie bolo neuspesne";
     }
+    }
+
+    if($loName == "admin" && $loPassword == "1111"){
+      header("Location: ./admin.php");
     }
   }
 ?>
@@ -72,7 +76,7 @@ if (array_key_exists("prihlasit", $_POST)) {
      
     <button class="btn btn-primary w-100 py-2" type="submit" name="prihlasit">Sign in</button>
     <a href="./registracia.php" id="acko">New user? Let´s create a account -></a>
-    <span id="oko">oko</span>
+    
     
                     <?php echo $chyba; ?>
     

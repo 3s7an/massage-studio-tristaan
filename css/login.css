@@ -29,12 +29,3 @@ body {
   display:flex;
 }
 
-#oko {
-  margin-left: 1em;
-  bottom: 120px;
-  position: relative;
-  right: -115px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
