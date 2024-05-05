@@ -1,5 +1,16 @@
 <?php 
 require "oop-stranky.php";
+
+$instanciaAktualnejStranky = null;
+
+//zachytenie stranky, na ktoru uzivatel klikol
+if(array_key_exists('stranka', $_GET)){
+	$idStranky = $_GET['stranka'];
+
+	//pomocná premenná vďaka ktorej sa dostaneme do toho objektu, kt. je označený kliknutim
+	$instanciaAktualnejStranky = $zoznam[$idStranky];
+	
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +23,7 @@ require "oop-stranky.php";
 	<?php 
 	//vypis vsetkych stranok, ktoré sa daju editovat
 	foreach($zoznam as $stranka => $instancia){
+	
 		
 		// pridanie si do url idčko stranky vdaka comu viem na ktoru stranku sa kliklo
 		echo "<li><a href='?stranka=$instancia->id'>$instancia->id</a></li>";	
