@@ -9,6 +9,7 @@ if(array_key_exists('stranka', $_GET)){
 
 	//pomocná premenná vďaka ktorej sa dostaneme do toho objektu, kt. je označený kliknutim
 	$instanciaAktualnejStranky = $zoznam[$idStranky];
+	var_dump($instanciaAktualnejStranky);
 	
 }
 ?>
@@ -29,7 +30,16 @@ if(array_key_exists('stranka', $_GET)){
 		echo "<li><a href='?stranka=$instancia->id'>$instancia->id</a></li>";	
 	}
 
+	//editačný formulár
+	if($instanciaAktualnejStranky != null){
+	echo "<h1>Editing page $instanciaAktualnejStranky->id</h1>";
+	}
 	?>
+	<form method="post">
+	<textarea name="obsah" cols="80" rows="15"></textarea>
+	<button name="save">Save</button>
+
+	</form>
 	
 </body>
 </html>
