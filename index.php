@@ -123,8 +123,10 @@ if (array_key_exists("odhlasit", $_POST)) {
   </section>
 
    <footer>
-    <h2>Menu</h2>
-   <ul>
+
+    <div class="footer-menu">
+      <h2>Menu</h2>
+          <ul>
             <?php
             //dynamicke zobrazenie nazvov stranky do UL-ka
               foreach($zoznam as $klucStranky => $hodnota)
@@ -133,8 +135,31 @@ if (array_key_exists("odhlasit", $_POST)) {
               echo "<li><a class='navbar-brand text-dark'  href='?stranka=$hodnota->id'>{$hodnota->menu}</a></li>";
               }
               ?>
-            </ul>
-   </footer>
+          </ul>
+
+    </div>
+
+    <div class="footer-contact">
+      <h2>Contact</h2>
+          <ul>
+            <li>Massage Studio Tristan</li>
+            <li>Tkalcovska 816</li>
+            <li>Uhersky Brod</li>
+          </ul>
+    </div>
+
+    <div class="footer-opening-hours">
+      <h2>Opening hours</h2>
+        <ul>
+          <li>Monday - Friday : 8h - 20h</li>
+          <li>Saturday: 10h - 16h</li>
+          <li>Sunday: Closed</li>
+        </ul>
+    </div>
+   
+  
+  
+  </footer>
 </body>
 
 <script src="app.js"></script>

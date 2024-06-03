@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
-</head>
-<body>
-    <h2 class="home-nadpis">Welcome to my website</h2>
+<h2 class="home-nadpis">Welcome to my website</h2>
     <p class="home-paragraph">
    
 Relax. Refresh. Rejuvenate.
@@ -43,5 +34,3 @@ At Massage Studio Tristan, we believe in the power of touch to heal and transfor
   
 </section>
 
-</body>
-</html>

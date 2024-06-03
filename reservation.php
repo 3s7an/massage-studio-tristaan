@@ -1,14 +1,4 @@
 				
-								
-				<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
     <h2 class="reservation-heading">Reservation</h2>
     <p id="reservation-booking-message">Let´s book a massage right now!</p>
     <p><i class="fa-solid fa-phone" id="reservation-telephone-icon"></i>You can call us at : 602229520</p>
@@ -30,5 +20,4 @@
 
     
     
-</body>
-</html>				
+			
