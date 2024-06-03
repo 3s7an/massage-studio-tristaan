@@ -5,15 +5,16 @@
 }
 
 header {
-    background-color: grey;
+    background-color: white;
     
 }
 section {
     
-    background-color: grey;
+    background-color: white;
+    
 }
 body {
-    background-color: grey;
+    background-color: white;
 }
 
 header .container {
@@ -49,7 +50,7 @@ header .container {
 }
 .menu ul li a {
     text-decoration: none;
-    color:white;
+    color:black;
 }
 
 .menu ul li #odhlasit  {
@@ -69,7 +70,7 @@ header .container {
     padding:40px;
     border: 1px solid white;
     background-color: rgba(79, 38, 6, 0.37);
-    color: white;
+    color: black;
     font-family: "Shadows Into Light", cursive;
   font-weight: 400;
   font-style: normal;
@@ -81,7 +82,7 @@ section .container {
 }
 
 section p {
-    font-size: 20px;
+    font-size: 50px;
    
 
 }
@@ -96,15 +97,15 @@ section p {
  .massage1 {
     display: flex;
     align-items: center;
-    margin-bottom: 200px;
-    
+    margin-bottom: 10em;
+     
     font-size:12px;
 }
 
 .massage2 {
     display: flex;
     align-items: center;
-    margin-bottom: 200px;
+    margin-bottom: 4em;
     flex-direction: row-reverse;
     
     font-size:12px;
@@ -113,13 +114,13 @@ section p {
 
 
 section .massage1 p {
-    font-size:20px;
+    font-size:2em;
     margin-right:50px;
    
 }
 
 section .massage2 p {
-    font-size:20px;
+    font-size:2em;
     margin-left:70px;
    
 }
@@ -195,23 +196,20 @@ footer ul{
 
   }
 
-  nav {
-    color:white;
-    
-  }
+ 
 
   .pozadie {
-    height: 10em;
+    height: 5em;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 5em;
-    margin-bottom: 2em;
-    background: url("../images/pexels-koolshooters-6628697.jpg");
+    font-size: 6em;
+  
+    
     background-repeat: no-repeat;
     background-size: cover;
-    color: white;
-    background-color: grey;
+    color: black;
+    
     
     
 }
@@ -220,6 +218,7 @@ footer ul{
 border: 2px solid white;
 padding: 2em;
 background-color: rgba(128, 128, 128, 0.268);
+font-size: 5rem;
 }
   
 nav ul {
@@ -228,3 +227,17 @@ nav ul {
 }
 
 
+#services {
+    font-size: 12em;
+    margin-bottom: 2em;
+}
+
+.home-nadpis {
+    font-size: 6em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.home-paragraph {
+    margin-bottom: 5em;
+}

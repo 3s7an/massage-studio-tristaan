@@ -57,7 +57,7 @@ if (array_key_exists("odhlasit", $_POST)) {
               foreach($zoznam as $klucStranky => $hodnota)
               {
                 if($hodnota->id != "404")
-              echo "<li><a class='navbar-brand text-white'  href='?stranka=$hodnota->id'>{$hodnota->menu}</a></li>";
+              echo "<li><a class='navbar-brand text-dark'  href='?stranka=$hodnota->id'>{$hodnota->menu}</a></li>";
               }
               ?>
             </ul>
@@ -111,21 +111,18 @@ if (array_key_exists("odhlasit", $_POST)) {
     </div>
     </header>    
 
-<section>
-  <div class="container-xl text-center">
+  <section>
+    <div class="container-xl text-center">
   
   
   <?php 
   //dynamicke zobrazenie stranky
    echo $zoznam[$stranka]->getObsah(); 
   ?>
-</div>
+    </div>
   </section>
-
-
-
-
 </body>
+
 <script src="app.js"></script>
 
 </html>

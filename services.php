@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <h2 class="text-center mb-3 mt-0" id="services">Our services and prices <i class="fa-solid fa-down-long"></i></h2>
+    <h2 class="text-center mb-3" id="services">Our services and prices <i class="fa-solid fa-down-long"></i></h2>
         <button type="button" id="polhodka">30min</button> / <button type="button" id="hodka">60min</button>
         <div class="accordion" id="accordionExample">
         

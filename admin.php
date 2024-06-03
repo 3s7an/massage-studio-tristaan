@@ -3,7 +3,7 @@ require "oop-stranky.php";
 
 $instanciaAktualnejStranky = null;
 
-//zachytenie stranky, na ktoru uzivatel klikol
+//zachytenie stranky, na ktoru uzivatel klikol	
 if(array_key_exists('stranka', $_GET)){
 	$idStranky = $_GET['stranka'];
 

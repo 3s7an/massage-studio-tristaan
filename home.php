@@ -7,8 +7,18 @@
     <title>Document</title>
 </head>
 <body>
+    <h2 class="home-nadpis">Welcome to my studio</h2>
+    <p class="home-paragraph">
+   
+Relax. Refresh. Rejuvenate.
+At Serenity Massage Studio, we believe in the power of touch to heal and transform. Our mission is to provide a sanctuary where you can escape the stresses of daily life and embark on a journey towards holistic well-being.
+</p>
+
+
     <section id="massage">
+        
         <div class="container-xl text-center">
+             
   
             <div class="massage1" >
                 <p><span class="nadpis">Benefits of Massage</span> <br>
@@ -28,6 +38,8 @@
                     <img src="./images/pexels-olly-3764568.jpg" class="img-fluid">
             </div>
     </div>
+
+    
   
 </section>
 
