@@ -7,11 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h2 class="home-nadpis">Welcome to my studio</h2>
+    <h2 class="home-nadpis">Welcome to my website</h2>
     <p class="home-paragraph">
    
 Relax. Refresh. Rejuvenate.
-At Serenity Massage Studio, we believe in the power of touch to heal and transform. Our mission is to provide a sanctuary where you can escape the stresses of daily life and embark on a journey towards holistic well-being.
+At Massage Studio Tristan, we believe in the power of touch to heal and transform. Our mission is to provide a sanctuary where you can escape the stresses of daily life and embark on a journey towards holistic well-being.
 </p>
 
 
