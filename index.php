@@ -121,6 +121,20 @@ if (array_key_exists("odhlasit", $_POST)) {
   ?>
     </div>
   </section>
+
+   <footer>
+    <h2>Menu</h2>
+   <ul>
+            <?php
+            //dynamicke zobrazenie nazvov stranky do UL-ka
+              foreach($zoznam as $klucStranky => $hodnota)
+              {
+                if($hodnota->id != "404")
+              echo "<li><a class='navbar-brand text-dark'  href='?stranka=$hodnota->id'>{$hodnota->menu}</a></li>";
+              }
+              ?>
+            </ul>
+   </footer>
 </body>
 
 <script src="app.js"></script>

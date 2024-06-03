@@ -165,28 +165,15 @@ button {
 }
 
 
-footer {
-    padding-top:5em;
-    display: flex;
-    justify-content: space-around;
-    background-color: rgba(79, 38, 6, 0.374);
-    flex-direction: column;
-    align-items: center;
-}
 
-
-footer ul{
-    list-style: none;
-    padding:2em;
-    font-size: 30px;
-    text-align: center;
-    font-family: "Shadows Into Light", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
 
 #accordion-exaple {
     margin-top: 20px;
+}
+
+.accordion-item p {
+    font-size: 2em;
+    font-weight: 500;
 }
 
 
@@ -197,6 +184,11 @@ footer ul{
 
   }
 
+  #services-description {
+    font-size: 1.5em;
+    font-weight: 400;
+  }
+
  
 
   .pozadie {
@@ -205,6 +197,7 @@ footer ul{
     justify-content: center;
     align-items: center;
     font-size: 6em;
+    background-color: rgb(55 156 85 / 69%);
   
     
     background-repeat: no-repeat;
@@ -216,9 +209,9 @@ footer ul{
 }
 
 .pozadie h1{
-border: 2px solid white;
+
 padding: 2em;
-background-color: rgba(128, 128, 128, 0.268);
+
 font-size: 5rem;
 }
   
@@ -229,8 +222,18 @@ nav ul {
 
 
 #services {
-    font-size: 12em;
-    margin-bottom: 2em;
+    font-size: 6em;
+    margin: 1em 0em 1em 0em;
+}
+
+.btn-outline-success {
+    
+    height: 3em;
+    width: 8em;
+    font-size:2em;
+    margin:1em 10px 2em 10px;
+    
+
 }
 
 .home-nadpis {
@@ -262,8 +265,18 @@ nav ul {
     margin-right: 20px;
 }
 
+#services-euro-icon {
+    font-size: 0.9em;
+    margin-left: 5px;
+   
+}
+
 #reservation-form-icon {
     margin-right: 20px;
+}
+
+.reservation-last-paragraph{
+    margin-bottom: 3em;
 }
 
 .reservation-forms {
@@ -279,3 +292,6 @@ nav ul {
     font-size: 2em;
 }
 
+.reservation-ending-message {
+    margin-top: 1em;
+}

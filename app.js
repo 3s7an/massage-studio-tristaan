@@ -13,21 +13,21 @@ let cupping = document.querySelector(".cupping");
 
 
 tlacitko2.addEventListener("click", function(){
-    swedish.innerHTML = '60<i class="fa-solid fa-euro-sign">';
-    trigger.innerHTML ='64<i class="fa-solid fa-euro-sign">';
-    thai.innerHTML = '76<i class="fa-solid fa-euro-sign">';;
-    hot.innerHTML = '50<i class="fa-solid fa-euro-sign">';;
-    lymphatic.innerHTML = '90<i class="fa-solid fa-euro-sign">';;
-    cupping.innerHTML = '60<i class="fa-solid fa-euro-sign">';;
+    swedish.innerHTML = '60';
+    trigger.innerHTML ='64';
+    thai.innerHTML = '76';
+    hot.innerHTML = '50';
+    lymphatic.innerHTML = '90';
+    cupping.innerHTML = '60';
 });
 
 tlacitko1.addEventListener("click", function(){
-    swedish.innerHTML = '30<i class="fa-solid fa-euro-sign">';;
-    trigger.innerHTML = '32<i class="fa-solid fa-euro-sign">';;
-    thai.innerHTML = '38<i class="fa-solid fa-euro-sign">';;
-    hot.innerHTML = '25<i class="fa-solid fa-euro-sign">';;
-    lymphatic.innerHTML = '45<i class="fa-solid fa-euro-sign">';;
-    cupping.innerHTML = '30<i class="fa-solid fa-euro-sign">';;
+    swedish.innerHTML = '30';
+    trigger.innerHTML = '32';
+    thai.innerHTML = '38';
+    hot.innerHTML = '25';
+    lymphatic.innerHTML = '45';
+    cupping.innerHTML = '30';
 });
 
 // -- koniec sekcie pre zmenu cien masazi
