@@ -57,18 +57,19 @@ if (array_key_exists("odhlasit", $_POST)) {
               foreach($zoznam as $klucStranky => $hodnota)
               {
                 if($hodnota->id != "404")
-              echo "<li><a class='navbar-brand text-dark'  href='?stranka=$hodnota->id'>{$hodnota->menu}</a></li>";
+              echo "<li><a class='navbar-brand text-white'  href='?stranka=$hodnota->id'>{$hodnota->menu}</a></li>";
               }
               ?>
             </ul>
               
             
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon text-"></span>
               </button>
           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              
               <?php 
               //dynamicke zobrazenie prihlaseneho uzivatela
                if(array_key_exists("prihlasenyUzivatel", $_SESSION)){
@@ -91,6 +92,7 @@ if (array_key_exists("odhlasit", $_POST)) {
                   <a class="nav-link active" aria-current="page" href="#">My reservations</a>
                 </li>
                 <form class="d-flex mt-3" method="post">
+                  
                   <?php
                   //zobrazenie tlacitka odhlasit iba v pripade ak je uzivatel prihlaseny
                  if(array_key_exists("prihlasenyUzivatel", $_SESSION)){

@@ -5,28 +5,42 @@ $heslo = null;
 $vysledok = null;
 
 //DATABASE CONNECTION 
-$db = new PDO(
-    "mysql:host=localhost;dbname=users;charset=utf8",
-    "root",
-    "", // heslo
-    array(
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-    ),
-);
+try {
+    $db = new PDO(
+        "mysql:host=localhost;dbname=users;charset=utf8",
+        "root",
+        "", // heslo
+        array(
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        ),
+    );
+} catch (PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
+}
 
 //CREATING ACC AFTER CLICK ON REGISTER BUTTON
-if (array_key_exists("zaregistrovat", $_GET)) {
-    $meno = $_GET["name"];
-    $heslo = $_GET["password"];
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["zaregistrovat"])) {
+    $meno = $_POST["name"] ?? null;
+    $heslo = $_POST["password"] ?? null;
 
-// HASING PASSWORD
-    $hashed_password = password_hash($heslo, PASSWORD_DEFAULT);
-    
-//INSERTING INTO DATABASE VALUES FROM INPUTS
-    $dotaz = $db->prepare("INSERT INTO `users`(`meno`, `heslo`) VALUES ('$meno','$hashed_password')");
-    $dotaz->execute();
-    header("Location: ./login.php");
+    // Ověření vstupů
+    if ($meno && $heslo) {
+        // HASHING PASSWORD
+        $hashed_password = password_hash($heslo, PASSWORD_DEFAULT);
+        
+        // INSERTING INTO DATABASE VALUES FROM INPUTS
+        $dotaz = $db->prepare("INSERT INTO `users`(`meno`, `heslo`) VALUES (:meno, :heslo)");
+        $dotaz->bindParam(':meno', $meno);
+        $dotaz->bindParam(':heslo', $hashed_password);
+        $dotaz->execute();
+        
+        header("Location: ./login.php");
+        exit; // Zajištění, že se žádný další kód nevykoná
+    } else {
+        // Zpracování chyby pro neplatné nebo prázdné vstupy
+        echo "Jméno a heslo musí být vyplněny.";
     }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +56,7 @@ if (array_key_exists("zaregistrovat", $_GET)) {
 
 <body>
 <main class="form-signin w-100 m-auto text-center mt-5">
-  <form method="get">
+  <form method="post">
     
     <h1 class="h3 mb-3 fw-normal" id="hacko">Sign up </h1>
 

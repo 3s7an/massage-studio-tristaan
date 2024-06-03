@@ -1,6 +1,10 @@
 create DATABASE users;
 
-CREATE TABLE users (id INT PRIMARY KEY , meno TEXT, heslo TEXT);
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    meno TEXT,
+    heslo TEXT
+);
 
 
 

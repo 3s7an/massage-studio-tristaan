@@ -4,7 +4,17 @@
    
 }
 
-
+header {
+    background-color: grey;
+    
+}
+section {
+    
+    background-color: grey;
+}
+body {
+    background-color: grey;
+}
 
 header .container {
     display:flex;
@@ -30,10 +40,12 @@ header .container {
     font-family: "Shadows Into Light", cursive;
   font-weight: 400;
   font-style: normal;
-    
+ 
 }
 .menu ul li {
     margin-right: 20px;
+    list-style: none;
+    
 }
 .menu ul li a {
     text-decoration: none;
@@ -67,9 +79,7 @@ header .container {
 section .container {
     width: 1200px;
 }
-section {
-    margin-bottom: 5em;
-}
+
 section p {
     font-size: 20px;
    
@@ -187,7 +197,7 @@ footer ul{
 
   nav {
     color:white;
-    border-bottom: 1px solid grey;
+    
   }
 
   .pozadie {
@@ -201,6 +211,7 @@ footer ul{
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+    background-color: grey;
     
     
 }
@@ -213,6 +224,7 @@ background-color: rgba(128, 128, 128, 0.268);
   
 nav ul {
     display: flex;
+    list-style: none;
 }
 
 
