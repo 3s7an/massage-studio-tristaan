@@ -9,7 +9,11 @@ if(array_key_exists('stranka', $_GET)){
 
 	//pomocná premenná vďaka ktorej sa dostaneme do toho objektu, kt. je označený kliknutim
 	$instanciaAktualnejStranky = $zoznam[$idStranky];
-	var_dump($instanciaAktualnejStranky);
+	}
+
+if(array_key_exists("save", $_POST)){
+	$obsah = $_POST["obsah"];
+	$instanciaAktualnejStranky->setObsah($obsah);
 	
 }
 ?>
@@ -27,7 +31,10 @@ if(array_key_exists('stranka', $_GET)){
 	
 		
 		// pridanie si do url idčko stranky vdaka comu viem na ktoru stranku sa kliklo
-		echo "<li><a href='?stranka=$instancia->id'>$instancia->id</a></li>";	
+		echo "<li>
+		<a href='?stranka=$instancia->id'>$instancia->id</a>
+		<a href='$instancia->id' target='_blank'>Zobrazit</a>
+		</li>";	
 	}
 
 	//editačný formulár
@@ -36,8 +43,13 @@ if(array_key_exists('stranka', $_GET)){
 	}
 	?>
 	<form method="post">
-	<textarea name="obsah" cols="80" rows="15"></textarea>
-	<button name="save">Save</button>
+		<textarea name="obsah" cols="80" rows="15">
+				
+				<?php 
+				echo htmlspecialchars($instanciaAktualnejStranky->getObsah()); 
+				?>
+		</textarea>
+			<button name="save">Save</button>
 
 	</form>
 	

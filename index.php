@@ -113,9 +113,11 @@ if (array_key_exists("odhlasit", $_POST)) {
 
 <section>
   <div class="container-xl text-center">
+  
+  
   <?php 
   //dynamicke zobrazenie stranky
-  echo file_get_contents("$stranka.php"); 
+   echo $zoznam[$stranka]->getObsah(); 
   ?>
 </div>
   </section>
