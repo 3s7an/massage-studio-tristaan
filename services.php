@@ -16,7 +16,7 @@
         <div class="accordion-item mt-5">
           <h3 class="accordion-header">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            <p>Swedish Massage -> <span class="swedish">30</span><i class="fa-solid fa-euro-sign" id="services-euro-icon"></i></p>
+            <p>Swedish massage -> <span class="swedish">30</span><i class="fa-solid fa-euro-sign" id="services-euro-icon"></i></p>
             </button>
           </h3>
           <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
@@ -31,7 +31,7 @@
         <div class="accordion-item">
           <h3 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              <p>Trigger point Massage -> <span class="trigger">32</span><i class="fa-solid fa-euro-sign" id="services-euro-icon"></i></p>
+              <p>Trigger point massage -> <span class="trigger">32</span><i class="fa-solid fa-euro-sign" id="services-euro-icon"></i></p>
             </button>
           </h3>
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -61,7 +61,7 @@
         <div class="accordion-item">
             <h3 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                <p>Hot Stone Massage -> <span class="hot">28</span><i class="fa-solid fa-euro-sign" id="services-euro-icon"></i></p>
+                <p>Hot stone massage -> <span class="hot">28</span><i class="fa-solid fa-euro-sign" id="services-euro-icon"></i></p>
               </button>
             </h3>
             <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -76,7 +76,7 @@
           <div class="accordion-item">
             <h3 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
-               <p>Lymphatic drainage Massage -> <span class="lymphatic">45</span><i class="fa-solid fa-euro-sign" id="services-euro-icon"></i></p> 
+               <p>Lymphatic drainage massage -> <span class="lymphatic">45</span><i class="fa-solid fa-euro-sign" id="services-euro-icon"></i></p> 
               </button>
             </h3>
             <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">

@@ -6,6 +6,7 @@ $heslo = null;
 $vysledok = null;
 $chyba = null;
 
+
 // DATABASE CONNECTION 
 try {
     $db = new PDO(
@@ -36,7 +37,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["zaregistrovat"])) {
         $count = $query->fetchColumn();
 
         if ($count > 0) {
-            $chyba =  "Email or username already exists.";
+            $chyba =  '
+            <div class="alert alert-danger mt-3" role="alert">
+            <p></p>Email or username already exists.</p>
+            </div>
+            ';
         } else {
             // HASHING PASSWORD
             $hashed_password = password_hash($heslo, PASSWORD_DEFAULT);
@@ -57,7 +62,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["zaregistrovat"])) {
         }
     } else {
         // Handling error for invalid inputs
-        echo "All fields must be filled.";
+        $chyba = '<div class="alert alert-danger mt-3" role="alert">
+        <p></p>All field must be filled</p>
+        </div>';
     }
 }
 ?>
@@ -79,6 +86,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["zaregistrovat"])) {
     
     <h1 class="h3 mb-3 fw-normal" id="hacko">Sign up </h1>
 
+    <?php echo $chyba ?>
+
     <div class="form-floating">
       <input type="email" class="form-control" id="floatingInput" placeholder="login" name="email">
       <label for="floatingInput">Email</label>
@@ -94,9 +103,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["zaregistrovat"])) {
       <label for="floatingPassword">Password</label>
     </div>
 
-    <button class="btn btn-primary w-100 py-2" type="submit" name="zaregistrovat">Create account</button>
-    <a href="./login.php" id="acko">Already have account? Let´s sign in -></a>
-    <p><?php echo $chyba?></p>
+    <button class="btn btn-primary w-100 py-2 mb-1" type="submit" name="zaregistrovat">Create account</button>
+      <a href="./login.php" id="acko">Already have account? Let´s sign in -></a>
+    
+    
+      
+    
+   
   
   </form>
 </main>

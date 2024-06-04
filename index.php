@@ -29,7 +29,15 @@ if (array_key_exists("odhlasit", $_POST)) {
 }
 
 //RESERVATION SECTION
-if(array_key_exists("prihlasenyUzivatel", $_SESSION)){
+if(array_key_exists("reservation-send", $_POST)){
+  $reservation_name = $_POST["reservation-name"];
+  $reservation_email = $_POST["reservation-email"];
+  $reservation_mobile = $_POST["reservation-mobile"];
+  $reservation_message = $_POST["reservation-message"];
+  $reservation_categories = $_POST["reservation-categories"];
+
+  var_dump($reservation_categories);
+
   
 }
 ?>

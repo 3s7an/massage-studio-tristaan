@@ -7,18 +7,21 @@
 
     <form method="post">
         <div class="reservation-forms">
-        <input type="text" placeholder="Name" name="reservation-name" value="<?php if (array_key_exists('prihlasenyUzivatel', $_SESSION)) {
-    echo $_SESSION['prihlasenyUzivatel'];
-} ?>">
-
-        <input type="text" placeholder="Mobile number" name="reservation-mobile">
-            <input type="email" placeholder="Email" name="reservation-email">
-                <input type="select" placeholder="Message" name="reservation-message">
-                    <label for="categories">Choose the type of massage</label>
-                        <select name="categories">
-                            <option>-- choose a type</option>
-                            </select>
-                    <button type="submit" name="reservation-send">Send</button>
+            <input type="text" placeholder="Name" name="reservation-name">
+                <input type="text" placeholder="Mobile number" name="reservation-mobile">
+                    <input type="email" placeholder="Email" name="reservation-email">
+                        <input type="select" placeholder="Message" name="reservation-message">
+                            <label for="categories">Choose the type of massage</label>
+                                <select name="reservation-categories">
+                                    <option value="none">- choose a type -</option>
+                                    <option value="swedish-massage">- Swedish massage -</option>
+                                    <option value="trigger-point-massage">- Trigger point massage -</option>
+                                    <option value="thai massage">- Thai massage -</option>
+                                    <option value="hot-stone-massage">- Hot stone massage -</option>
+                                    <option value="lymphatic-drainage-massage">- Lymphatic drainage massage -</option>
+                                    <option value="cupping">- Cupping -</option>
+                                    </select>
+                            <button type="submit" name="reservation-send">Send</button>
         </div>
     </form>
     
@@ -27,9 +30,4 @@
 
     
     
-			<?php if(array_key_exists("prihlasenyUzivatel", $_SESSION)){
-        echo $_SESSION['prihlasenyUzivatel'];
-        }
-        else {
-            echo "Ahoj to som ja";             
-        }?>
+			
