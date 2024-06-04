@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <h2 class="text-center" id="services">Check our service offer and price list</h2>
+    <h2 class="text-center" id="services">Services and price list</h2>
         <button type="button" class="btn btn-outline-success" id="polhodka">30 minutes</button> <button type="button" class="btn btn-outline-success" id="hodka">60 minutes</button>
         <div class="accordion" id="accordionExample">
         

@@ -10,7 +10,11 @@
     <input type="text" placeholder="Name">
         <input type="text" placeholder="Mobile number">
             <input type="email" placeholder="Email">
-                <input type="textarea" placeholder="Message">
+                <input type="select" placeholder="Message">
+                    <label for="categories">Choose the type of massage</label>
+                        <select>
+                            <option>-- choose a type</option>
+                            </select>
                     <button type="submit" name="reservation-send">Send</button>
         </div>
     </form>

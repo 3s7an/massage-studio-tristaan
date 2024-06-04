@@ -46,11 +46,7 @@ section .container {
     width: 1200px;
 }
 
-section p {
-    font-size: 2em;
-   
 
-}
 
 .img-fluid {
     width:43%;
@@ -121,9 +117,7 @@ section h1 {
   font-style: normal;
 }
 
-section h3 {
-    margin-bottom: 100px;
-}
+
 
 button {
     margin-bottom: 20px;
@@ -267,6 +261,7 @@ footer {
     background-color: rgb(55 156 85 / 69%);
     padding: 4em 0 4em 0;
     align-items: flex-start;
+    margin-top: 6em;
 }
 
 footer ul {
@@ -298,4 +293,62 @@ footer ul {
     display: flex; 
     flex-direction: column;
     align-items: center;
+}
+
+#contact-heading{
+        font-size:6em;
+        margin: 1em 0em 2em 0em ;
+        font-weight: 500;
+    }
+    
+.contact-page {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10em;
+}
+
+.contact-page p {
+    font-size: 2em;
+    margin:10px;
+}
+
+.address{
+display: flex;
+flex-direction: column;
+}
+
+.address a {
+    text-decoration: underline;
+    color: rgba(0, 0, 0, 0.516);
+    font-size: 2em;
+    
+}
+
+.contact-page h3 {
+    font-size: 4em;
+    margin-bottom: 0.5em;
+}
+
+.contact-page h2 {
+    font-size: 5em;
+}
+
+.contact-page p {
+    margin:0;
+}
+
+.opening-hours {
+    display:flex;
+    flex-direction: column;
+}
+.contact-page table {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.container-full-width
+{
+    width: 100%;
+
 }
