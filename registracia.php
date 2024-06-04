@@ -1,13 +1,15 @@
 <?php
 
 $meno = null;
+$email = null;
 $heslo = null;
 $vysledok = null;
+$chyba = null;
 
-//DATABASE CONNECTION 
+// DATABASE CONNECTION 
 try {
     $db = new PDO(
-        "mysql:host=localhost;dbname=users;charset=utf8",
+        "mysql:host=localhost;dbname=massage_studio;charset=utf8",
         "root",
         "", // heslo
         array(
@@ -18,27 +20,40 @@ try {
     die("Connection failed: " . $e->getMessage());
 }
 
-//CREATING ACC AFTER CLICK ON REGISTER BUTTON
+// CREATING ACC AFTER CLICK ON REGISTER BUTTON
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["zaregistrovat"])) {
     $meno = $_POST["name"] ?? null;
+    $email = $_POST["email"] ?? null;
     $heslo = $_POST["password"] ?? null;
 
-    // Ověření vstupů
-    if ($meno && $heslo) {
-        // HASHING PASSWORD
-        $hashed_password = password_hash($heslo, PASSWORD_DEFAULT);
-        
-        // INSERTING INTO DATABASE VALUES FROM INPUTS
-        $dotaz = $db->prepare("INSERT INTO `users`(`meno`, `heslo`) VALUES (:meno, :heslo)");
-        $dotaz->bindParam(':meno', $meno);
-        $dotaz->bindParam(':heslo', $hashed_password);
-        $dotaz->execute();
-        
-        header("Location: ./login.php");
-        exit; // Zajištění, že se žádný další kód nevykoná
+    // Overenie vstupu
+    if ($meno && $heslo && $email) {
+        // Check if email or username already exists
+        $query = $db->prepare("SELECT COUNT(*) FROM `users` WHERE `meno` = :meno OR `email` = :email");
+        $query->bindParam(':meno', $meno);
+        $query->bindParam(':email', $email);
+        $query->execute();
+        $count = $query->fetchColumn();
+
+        if ($count > 0) {
+            $chyba =  "Email or username already exists.";
+        } else {
+            // HASHING PASSWORD
+            $hashed_password = password_hash($heslo, PASSWORD_DEFAULT);
+
+            // INSERTING INTO DATABASE VALUES FROM INPUTS
+            $dotaz = $db->prepare("INSERT INTO `users`(`meno`, `email`, `heslo`) VALUES (:meno, :email, :heslo)");
+            $dotaz->bindParam(':meno', $meno);
+            $dotaz->bindParam(':email', $email);
+            $dotaz->bindParam(':heslo', $hashed_password);
+            $dotaz->execute();
+
+            header("Location: ./login.php");
+            exit; // Ensure no other code is executed
+        }
     } else {
-        // Zpracování chyby pro neplatné nebo prázdné vstupy
-        echo "Jméno a heslo musí být vyplněny.";
+        // Handling error for invalid inputs
+        echo "All fields must be filled.";
     }
 }
 ?>
@@ -61,9 +76,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["zaregistrovat"])) {
     <h1 class="h3 mb-3 fw-normal" id="hacko">Sign up </h1>
 
     <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInput" placeholder="login" name="email">
+      <label for="floatingInput">Email</label>
+    </div>
+    
+    <div class="form-floating">
       <input type="text" class="form-control" id="floatingInput" placeholder="login" name="name">
       <label for="floatingInput">Name</label>
     </div>
+   
     <div class="form-floating">
       <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
       <label for="floatingPassword">Password</label>
@@ -71,6 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["zaregistrovat"])) {
 
     <button class="btn btn-primary w-100 py-2" type="submit" name="zaregistrovat">Create account</button>
     <a href="./login.php" id="acko">Already have account? Let´s sign in -></a>
+    <p><?php echo $chyba?></p>
   
   </form>
 </main>

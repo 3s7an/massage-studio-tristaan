@@ -6,7 +6,7 @@ $chyba = null;
 
 //databazove spojenie
 $db = new PDO(
-    "mysql:host=localhost;dbname=users;charset=utf8",
+    "mysql:host=localhost;dbname=massage_studio;charset=utf8",
     "root",
     "", // heslo
     array(
@@ -37,7 +37,7 @@ if (array_key_exists("prihlasit", $_POST)) {
     //uzivatel zadal neplatne udaje 
     else 
     {
-    $chyba =  "Prihlasenie bolo neuspesne";
+    $chyba = "Login was unsuccessful, you entered incorrect login data";
     }
     }
 
@@ -79,9 +79,7 @@ if (array_key_exists("prihlasit", $_POST)) {
      
     <button class="btn btn-primary w-100 py-2" type="submit" name="prihlasit">Sign in</button>
     <a href="./registracia.php" id="acko">New user? Let´s create a account -></a>
-    
-    
-                    <?php echo $chyba; ?>
+    <p><?php echo $chyba; ?></p>
     
   </form>
 </main>

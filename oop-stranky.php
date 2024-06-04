@@ -11,11 +11,11 @@ class Stranka {
     }
 
     function getObsah(){
-        return file_get_contents("$this->id.php");
+        return file_get_contents("$this->id.html");
     }
 
     function setObsah($obsah){
-        file_put_contents("$this->id.php", $obsah);
+        file_put_contents("$this->id.html", $obsah);
 
     }
 }
