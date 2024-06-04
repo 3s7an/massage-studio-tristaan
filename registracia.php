@@ -48,7 +48,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["zaregistrovat"])) {
             $dotaz->bindParam(':heslo', $hashed_password);
             $dotaz->execute();
 
+            $_SESSION["email"] = $email;
+            $_SESSION["meno"] = $meno;
+            
             header("Location: ./login.php");
+            
             exit; // Ensure no other code is executed
         }
     } else {

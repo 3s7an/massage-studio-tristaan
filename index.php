@@ -27,6 +27,11 @@ if (array_key_exists("odhlasit", $_POST)) {
     unset($_SESSION["prihlasenyUzivatel"]);
     header("Location: ./login.php");
 }
+
+//RESERVATION SECTION
+if(array_key_exists("prihlasenyUzivatel", $_SESSION)){
+  
+}
 ?>
 
 <!DOCTYPE html>
@@ -72,7 +77,7 @@ if (array_key_exists("odhlasit", $_POST)) {
               
               <?php 
               //dynamicke zobrazenie prihlaseneho uzivatela
-               if(array_key_exists("prihlasenyUzivatel", $_SESSION)){
+              if(array_key_exists("prihlasenyUzivatel", $_SESSION)){
                  echo "<p>Logged user : {$_SESSION['prihlasenyUzivatel']}</p>"; 
             }
             else {
