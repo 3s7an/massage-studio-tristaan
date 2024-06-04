@@ -70,7 +70,7 @@ if(array_key_exists("logout", $_POST)){
 	}
 	?>
 	<form method="post">
-		<textarea name="obsah" cols="80" rows="15">
+		<textarea name="obsah" cols="80" rows="15" id="obsah">
 				
 				<?php 
 				echo htmlspecialchars($instanciaAktualnejStranky->getObsah()); 
@@ -79,6 +79,20 @@ if(array_key_exists("logout", $_POST)){
 			<button name="save" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i></button>
 
 	</form>
+	<script src="./vendor/tinymce/tinymce/tinymce.min.js"></script>
+	<script type="text/javascript">
+            tinymce.init({
+                selector: '#obsah',
+				language: 'cs',
+                language_url: '<?php echo dirname($_SERVER["PHP_SELF"]); ?>/vendor/tweeb/tinymce-i18n/langs/cs.js',
+				height: '50vh',
+				entity_encoding: "raw",
+				verify_html: false,
+				content_css: [
+                        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css',
+                    ],
+            });
+            </script>
 	</main>
 	</div>
 	

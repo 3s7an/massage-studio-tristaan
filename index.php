@@ -36,7 +36,7 @@ if(array_key_exists("reservation-send", $_POST)){
   $reservation_message = $_POST["reservation-message"];
   $reservation_categories = $_POST["reservation-categories"];
 
-  var_dump($reservation_categories);
+  
 
   
 }
