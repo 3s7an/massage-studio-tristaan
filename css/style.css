@@ -250,6 +250,11 @@ nav ul {
     height: 4em;
     margin-bottom: 1em;
 }
+.reservation-forms input {
+    height: 4em;
+    margin-bottom: 1em;
+}
+
 .reservation-forms input::placeholder{
     font-size: 2em;
 }
@@ -257,6 +262,7 @@ nav ul {
 .reservation-ending-message {
     margin-top: 1em;
 }
+
 
 footer {
     display: flex;

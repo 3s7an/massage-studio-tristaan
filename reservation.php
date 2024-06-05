@@ -13,7 +13,7 @@
                         <input type="select" placeholder="Message" name="reservation-message">
                             <label for="categories">Choose the type of massage</label>
                                 <select name="reservation-categories">
-                                    <option value="none">- choose a type -</option>
+                                    <option value="none" style="height:4em;">- choose a type -</option>
                                     <option value="swedish-massage">- Swedish massage -</option>
                                     <option value="trigger-point-massage">- Trigger point massage -</option>
                                     <option value="thai massage">- Thai massage -</option>
@@ -21,7 +21,7 @@
                                     <option value="lymphatic-drainage-massage">- Lymphatic drainage massage -</option>
                                     <option value="cupping">- Cupping -</option>
                                     </select>
-                            <button type="submit" name="reservation-send">Send</button>
+                            <button type="submit" name="reservation-send" class="btn btn-success mt-3">Send</button>
         </div>
     </form>
     
